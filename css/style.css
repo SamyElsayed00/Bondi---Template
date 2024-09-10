@@ -1,0 +1,202 @@
+:root {
+  --dark-color: #19283f;
+  --cyan-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-btn {
+  color: var(--yellow-color);
+  background-color: var(--red-color);
+  padding: 0.5rem 1.5rem;
+}
+
+.main-title::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--cyan-color);
+}
+/* Start Navbar */
+
+.navbar {
+  background-color: var(--dark-color);
+}
+
+.navbar .nav-link {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: var(--cyan-color);
+}
+
+.navbar-toggler {
+  color: white;
+  font-size: 25px;
+  border-color: white;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .search {
+  color: var(--cyan-color);
+  border-left: 1px solid var(--cyan-color);
+}
+/* End Navbar */
+/* Start Landing */
+.landing {
+  background-color: var(--dark-color);
+  min-height: calc(100vh - 72px);
+}
+
+/* End Landing */
+/* Start Features */
+.features .icon-holder {
+  height: 200px;
+}
+.features .icon-holder svg {
+  /* svg Because The files are cllaed them convert i to svg */
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icon-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+.features .icon-holder .icon {
+  color: var(--cyan-color);
+}
+.features .feat h4 {
+  color: var(--yellow-color);
+}
+/* End Features */
+/* Strat Our Work */
+.our-work {
+  background-color: var(--section-color);
+}
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.our-work ul li.active {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+.our-work ul li:not(.active):hover {
+  color: var(--red-color);
+}
+.our-work .box {
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  left: -100%;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background-color: #33d1cc94;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+}
+.our-work .box:hover::before {
+  left: 5px;
+}
+/* End Our Work */
+/* Start Stuff */
+.stuff .description {
+  max-width: 500px;
+}
+/* End Stuff */
+/* Start Team */
+.team {
+  background-color: var(--section-color);
+}
+.team h2 {
+  color: var(--yellow-color);
+}
+.team .box h4 {
+  background-color: var(--cyan-color);
+}
+/* End Team */
+/* Start Project */
+.project {
+  background-color: var(--dark-color);
+}
+/* End Project */
+/* Start Subscribe */
+.subscribe {
+  background-color: var(--yellow-color);
+}
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  color: white;
+}
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+.subscribe input::placeholder {
+  color: white;
+  font-weight: bold;
+}
+.subscribe input[type="submit"] {
+  background-color: var(--dark-color);
+}
+.subscribe input[type="submit"]:hover {
+  color: var(--yellow-color);
+}
+/* End Subscribe */
+/* Start Footer */
+footer {
+  background-color: var(--dark-color);
+}
+footer .copyright > span {
+  font-weight: bold;
+  color: var(--cyan-color);
+}
+footer .copyright div span {
+  font-weight: bold;
+  color: var(--yellow-color);
+}
+
+footer .icons .facebook {
+  color: #1877f2;
+  background-color: white;
+}
+footer .icons .twitter {
+  color: #1da1f2;
+  background-color: white;
+}
+footer .icons .linkedin {
+  color: #0a66c2;
+  background-color: white;
+}
+footer .icons .youtube {
+  color: #ff0000;
+  background-color: white;
+}
+/* End Footer */
